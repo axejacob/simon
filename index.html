@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Simon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+<!-- Render sound clips and store on DO spaces -->
+  <audio id="sound1">
+    <source src=""></source>
+  </audio>
+  <audio id="sound2">
+    <source src=""></source>
+  </audio>
+  <audio id="sound3">
+    <source src=""></source>
+  </audio>
+  <audio id="sound4">
+    <source src=""></source>
+  </audio>
+</head>
+
+<body>
+
+  <div id="bigcircle">
+    <div id="topL"></div>
+    <div id="topR"></div>
+    <div id="bottomL"></div>
+    <div id="bottomR"></div>
+
+    <div id="smallcircle">
+        <div id="title">SIMON</div>
+
+        <div id="switch">
+              <input type="checkbox" class="toggle" id="on">
+              <button class="button" id="start">Start</button>
+
+        </div>
+
+        <div class="text1">
+        <span>POWER</span>
+        </div>
+
+        <div id="turn"></div>
+        <div class="text2">COUNT</div>
+    </div>
+  </div>
+
+<script  src="script.js"></script>
+
+</body>
+</html>
