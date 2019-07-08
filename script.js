@@ -135,6 +135,12 @@ function clearColor(){
     bottomR.style.backgroundColor = '#ffa700';
 }
 
+function flashColor(){
+    topL.style.backgroundColor = '#c6dbff';
+    topR.style.backgroundColor = '#ffbbb5';
+    bottomL.style.backgroundColor = '#a2ffd1';
+    bottomR.style.backgroundColor = '#ffd78c';
+}
 topL.addEventListener('click', (event) => {
     if (on) {
         playerOrder.push(1);
@@ -143,7 +149,7 @@ topL.addEventListener('click', (event) => {
         if(!win){
             setTimeout(() => {
                 clearColor();
-            }, 300)
+            }, 300);
         }
     }
 })
@@ -187,6 +193,8 @@ bottomR.addEventListener('click', (event) => {
     }
 })
 
+//check if player's last enter is correct. Good is true if player get's it correct
+//Check if player won
 function check(){
     if(playerOrder[playerOrder.length - 1] !==[playerOrder.length - 1]) good = false;
     if(playerOrder.length == 20 && good == true) {
@@ -212,4 +220,21 @@ function check(){
 
         sound = false;
     }
+}
+
+// If player got it correct but not won yet(use !win)
+  if (turn == playerOrder.length && good && !win) {
+    turn++;
+    playerOrder = [];
+    compTurn = true;
+    flash = 0;
+    turnCounter.innerHTML = turn;
+    intervalId = setInterval(gameTurn, 800);
+  }
+
+function winGame() {
+  flashColor();
+  turnCounter.innerHTML = "WIN!";
+  on = false;
+  win = true;
 }
