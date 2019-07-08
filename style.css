@@ -12,7 +12,7 @@ body {
   padding-left: 10px;
   font-size: 1.7em;
   background-color: lightgray;
-  padding-top: 40px;
+  padding-top: 0px;
 }
 
 #switch {
@@ -93,7 +93,7 @@ body {
   box-shadow: 8px 8px 15px 5px #888888;
 }
 
-#topL {
+#blue {
   position: absolute;
   height: 350px;
   width: 350px;
@@ -111,7 +111,7 @@ body {
   -webkit-box-sizing: border-box;
 }
 
-#topR {
+#red {
   position: absolute;
   height: 350px;
   width: 350px;
@@ -129,7 +129,7 @@ body {
   -webkit-box-sizing: border-box;
 }
 
-#bottomL {
+#green {
   position: absolute;
   height: 350px;
   width: 350px;
@@ -147,7 +147,7 @@ body {
   -webkit-box-sizing: border-box;
 }
 
-#bottomR {
+#yellow {
   position: absolute;
   height: 350px;
   width: 350px;
