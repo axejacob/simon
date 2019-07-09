@@ -55,17 +55,15 @@ function play() {
   turn = 1;
   turnCounter.innerHTML = 1;
   good = true;
-  for (var i = 0; i < 20; i++) {
+  for (var i = 0; i < 5; i++) {
     order.push(Math.floor(Math.random() * 4) + 1);
   }
   compTurn = true;
-
   intervalId = setInterval(gameTurn, 800);
 }
 
 function gameTurn() {
   on = false;
-
   if (flash == turn) {
     clearInterval(intervalId);
     compTurn = false;
@@ -125,7 +123,7 @@ function clearColor() {
   blue.style.backgroundColor = "darkblue";
   red.style.backgroundColor = "darkred";
   green.style.backgroundColor = "darkgreen";
-  yellow.style.backgroundColor = "goldenrod";
+  yellow.style.backgroundColor = "#d49700";
 }
 
 function flashColor() {
@@ -191,13 +189,13 @@ function check() {
   if (playerOrder[playerOrder.length - 1] !== order[playerOrder.length - 1])
     good = false;
 
-  if (playerOrder.length == 10 && good) {
+  if (playerOrder.length == 5 && good) {
     winGame();
   }
 
   if (good == false) {
     flashColor();
-    turnCounter.innerHTML = "NO!";
+    turnCounter.innerHTML = "WRONG!";
     setTimeout(() => {
       turnCounter.innerHTML = turn;
       clearColor();
@@ -228,7 +226,7 @@ function check() {
 
 function winGame() {
   flashColor();
-  turnCounter.innerHTML = "WIN!";
+  turnCounter.innerHTML = "DYNAMITE!";
   on = false;
   win = true;
 }
