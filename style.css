@@ -1,7 +1,19 @@
 body {
-	padding: 200px;
+	font-family: fira, sans-serif;
+	padding-top: 100px;
+	padding-bottom: 400px;
 }
 
+h1{
+	padding-bottom: 0px;
+	text-align: center;
+	font-size: 80px;
+}
+
+h2{
+	text-align: center;
+	padding-bottom: 100px;
+}
 
 .toggle {
   margin-left: 20px;
